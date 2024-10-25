@@ -1,54 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeelaKrishna's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>LeelaKrishna's Portfolio</h1>
-        <nav>
-            <a href="#qualifications">Qualifications</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeelaKrishna Tumati - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">LeelaKrishna Tumati</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">LeelaKrishna Tumati</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="LeelaKrishna Tumati profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">LeelaKrishna Tumati</h1>
+        <p class="section__text__p2">Network Engineer II</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+      </div>
+    </section>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hello, I'm LeelaKrishna, a software developer with extensive experience in Java, Spring Boot, and Network Security. Here are my qualifications and projects.</p>
-    </section>
-
-    <section id="qualifications">
-        <h2>Qualifications</h2>
-        <ul>
-            <li>Bachelor's in Telecommunications and Network Engineering</li>
-            <li>Master's in Telecommunications and Network Engineering (Australia)</li>
-            <li>Certifications in Network Security, Java Full Stack Development</li>
-            <li>4+ years of experience as a Network Security Engineer</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1: Secure Network Infrastructure</h3>
-            <p>Implemented a secure network infrastructure using firewall, VPN, and IDS technologies.</p>
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-        <div class="project">
-            <h3>Project 2: Java Microservices Application</h3>
-            <p>Developed a microservices-based application using Spring Boot, Docker, and Kubernetes.</p>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>4+ years <br />Network Engineer II</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor's Degree<br />Master's Degree</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I earned my Bachelor’s degree in Electronics and Communications from Jawaharlal Nehru Technological University, Hyderabad, India, where I developed a solid foundation in electronic systems, signal processing, and communication principles. Building on this, I pursued a Master’s degree in Telecommunications and Network Engineering from La Trobe University, Melbourne, Australia. This advanced education has refined my expertise in network architecture, IP networking, and telecommunications protocols, with a focus on secure data transmission and optimized connectivity solutions.
+              
+              Through rigorous training in both wired and wireless network systems, including LAN, WAN, and VLAN technologies, I gained proficiency in end-to-end network design and troubleshooting, cybersecurity practices, and network performance optimization. My academic background has been pivotal in preparing me for a role in network engineering, aligning my skills with industry demands to address complex technical challenges, implement scalable solutions, and ensure secure, high-performing networks.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer id="contact">
-        <h2>Contact</h2>
-        <p>Email: leelakrishna@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/leelakrishna" target="_blank">LeelaKrishna's LinkedIn</a></p>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Network Security Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>LAN</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>WAN</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CNA</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:leelakrishna06@gmail.com">leelakrishna06@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 LeelaKrishna Tumati. All Rights Reserved.</p>
     </footer>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
