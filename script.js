@@ -1,4 +1,6 @@
-// Placeholder for future JavaScript functionality
-// You can add dynamic interactions, form validation, animations, or other features here later.
-
-console.log("LeelaKrishna's Portfolio Website is loaded.");
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
